@@ -1,0 +1,178 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _18.FootballTicket
+{
+    class footballTicket
+    {
+        static void Main(string[] args)
+        {
+            double budget = double.Parse(Console.ReadLine());//10000
+            string ticket = Console.ReadLine();//VIP
+            int numPeople = int.Parse(Console.ReadLine());//2
+            if (numPeople <= 4)
+            {
+                var transportBudget = 0.75 * budget;
+                var leftMoney = budget - transportBudget;
+                var vipTicket = numPeople * 499.99;//2*499.99=999.98
+                var normalTicket = numPeople * 249.99;
+                
+                if(ticket=="VIP")
+                {
+                    var overall = vipTicket + transportBudget;//99.98+2500=3499.98
+                    if (budget > overall)
+                    {
+                        Console.WriteLine("Yes! You have {0:f2} leva left.",budget-overall);//10000-3498.98=650.02
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough money! You need {0:f2} leva.",overall-budget);//1249.98-100=249.98
+                    }
+                }
+                else if (ticket == "Normal")
+                {
+                    var overall = normalTicket + transportBudget;//99.98+2500=3499.98
+                    if (budget > overall)
+                    {
+                        Console.WriteLine("Yes! You have {0:f2} leva left.", budget - overall);//10000-3498.98=650.02
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough money! You need {0:f2} leva.", overall - budget);//1249.98-100=249.98
+                    }
+                }
+            }
+            else if (numPeople > 4 && numPeople <= 9)
+            {
+                var transportBudget = 0.60 * budget;
+                var leftMoney = budget - transportBudget;
+                var vipTicket = numPeople * 499.99;//2*499.99=999.98
+                var normalTicket = numPeople * 249.99;
+
+                if (ticket == "VIP")
+                {
+                    var overall = vipTicket + transportBudget;//99.98+2500=3499.98
+                    if (budget > overall)
+                    {
+                        Console.WriteLine("Yes! You have {0:f2} leva left.", budget - overall);//10000-3498.98=650.02
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough money! You need {0:f2} leva.", overall - budget);//1249.98-100=249.98
+                    }
+                }
+                else if (ticket == "Normal")
+                {
+                    var overall = normalTicket + transportBudget;//99.98+2500=3499.98
+                    if (budget > overall)
+                    {
+                        Console.WriteLine("Yes! You have {0:f2} leva left.", budget - overall);//10000-3498.98=650.02
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough money! You need {0:f2} leva.", overall - budget);//1249.98-100=249.98
+                    }
+                }
+            }
+            else if (numPeople > 9 && numPeople <= 24)
+            {
+                var transportBudget = 0.50 * budget;
+                var leftMoney = budget - transportBudget;
+                var vipTicket = numPeople * 499.99;//2*499.99=999.98
+                var normalTicket = numPeople * 249.99;
+
+                if (ticket == "VIP")
+                {
+                    var overall = vipTicket + transportBudget;//99.98+2500=3499.98
+                    if (budget > overall)
+                    {
+                        Console.WriteLine("Yes! You have {0:f2} leva left.", budget - overall);//10000-3498.98=650.02
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough money! You need {0:f2} leva.", overall - budget);//1249.98-100=249.98
+                    }
+                }
+                else if (ticket == "Normal")
+                {
+                    var overall = normalTicket + transportBudget;//99.98+2500=3499.98
+                    if (budget > overall)
+                    {
+                        Console.WriteLine("Yes! You have {0:f2} leva left.", budget - overall);//10000-3498.98=650.02
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough money! You need {0:f2} leva.", overall - budget);//1249.98-100=249.98
+                    }
+                }
+            }
+            else if (numPeople > 24 && numPeople < 50)
+            {
+                var transportBudget = 0.40 * budget;
+                var leftMoney = budget - transportBudget;
+                var vipTicket = numPeople * 499.99;//2*499.99=999.98
+                var normalTicket = numPeople * 249.99;
+
+                if (ticket == "VIP")
+                {
+                    var overall = vipTicket + transportBudget;//99.98+2500=3499.98
+                    if (budget > overall)
+                    {
+                        Console.WriteLine("Yes! You have {0:f2} leva left.", budget - overall);//10000-3498.98=650.02
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough money! You need {0:f2} leva.", overall - budget);//1249.98-100=249.98
+                    }
+                }
+                else if (ticket == "Normal")
+                {
+                    var overall = normalTicket + transportBudget;//99.98+2500=3499.98
+                    if (budget > overall)
+                    {
+                        Console.WriteLine("Yes! You have {0:f2} leva left.", budget - overall);//10000-3498.98=650.02
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough money! You need {0:f2} leva.", overall - budget);//1249.98-100=249.98
+                    }
+                }
+            }
+            else
+            {
+                var transportBudget = 0.25 * budget;
+                var leftMoney = budget - transportBudget;
+                var vipTicket = numPeople * 499.99;//2*499.99=999.98
+                var normalTicket = numPeople * 249.99;
+
+                if (ticket == "VIP")
+                {
+                    var overall = vipTicket + transportBudget;//99.98+2500=3499.98
+                    if (budget > overall)
+                    {
+                        Console.WriteLine("Yes! You have {0:f2} leva left.", budget - overall);//10000-3498.98=650.02
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough money! You need {0:f2} leva.", overall - budget);//1249.98-100=249.98
+                    }
+                }
+                else if (ticket == "Normal")
+                {
+                    var overall = normalTicket + transportBudget;//99.98+2500=3499.98
+                    if (budget > overall)
+                    {
+                        Console.WriteLine("Yes! You have {0:f2} leva left.", budget - overall);//10000-3498.98=650.02
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not enough money! You need {0:f2} leva.", overall - budget);//1249.98-100=249.98
+                    }
+                }
+            }
+        }
+    }
+}
